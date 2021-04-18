@@ -1,0 +1,28 @@
+@import 'bootstrap/bootstrap';
+
+$ff-serif: 'PT Serif', serif;
+
+.ff-serif {
+  font-family: $ff-serif !important;
+}
+
+.header {
+  position: relative;
+  z-index: 0;
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: red;
+  opacity: .85;
+}
+
+.bg-gray {
+  background-color: $gray-200;
+}
