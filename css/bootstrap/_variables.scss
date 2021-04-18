@@ -73,7 +73,7 @@ $success:       $green !default;
 $info:          $cyan !default;
 $warning:       $yellow !default;
 $danger:        $red !default;
-$light:         $gray-100 !default;
+$light:         #efefef !default;
 $dark:          $gray-900 !default;
 // scss-docs-end theme-color-variables
 
@@ -276,7 +276,7 @@ $position-values: (
 //
 // Settings for the `<body>` element.
 
-$body-bg:                   $white !default;
+$body-bg:                   $light !default;
 $body-color:                $primary !default;
 $body-text-align:           null !default;
 

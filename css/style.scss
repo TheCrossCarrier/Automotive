@@ -10,19 +10,62 @@ $ff-serif: 'PT Serif', serif;
   background-color: $gray-200;
 }
 
+.icon {
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* Header */
+
 .header {
   position: relative;
   z-index: 0;
+
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: red;
+    opacity: .87;
+  }
 }
 
-.header::before {
-  content: '';
-  position: absolute;
-  z-index: -1;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  background-color: red;
-  opacity: .87;
+/* Servises */
+
+.services-list li {
+  .icon {
+    height: 160px;
+  }
+
+  p {
+    max-width: 210px;
+  }
+}
+
+/* Pricing */
+
+.card-badge {
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: 'Popular';
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding-top: 2em;
+    padding-bottom: .7em;
+    width: 170px;
+    height: 76px;
+    background-color: $secondary;
+    transform: translate(-33%, -15%) rotate(-45deg);
+    font-family: $ff-serif;
+    font-size: 1.125rem;
+    text-align: center;
+  }
 }
