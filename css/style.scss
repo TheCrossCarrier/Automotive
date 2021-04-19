@@ -69,3 +69,27 @@ $ff-serif: 'PT Serif', serif;
     text-align: center;
   }
 }
+
+/* Testimonial */
+
+.testimonial-w-bg {
+  position: relative;
+  z-index: 0;
+
+  &::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: calc(105px / 2);
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: $border-radius;
+    background-color: $gray-300;
+
+    @include media-breakpoint-up(xl) {
+      top: 0;
+      right: calc(105px / 2);
+    }
+  }
+}
